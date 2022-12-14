@@ -22,7 +22,7 @@ const ParticlesContainer = () => {
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
-          smooth: true,
+          smooth: false,
           preset: "links",
           background: {
             color: {
@@ -33,55 +33,28 @@ const ParticlesContainer = () => {
           interactivity: {
             events: {
               onClick: {
-                enable: true,
+                enable: false,
                 mode: ["push", "remove"],
               },
               resize: true,
               onHover: {
                 enable: true,
-                mode: "grab",
+                mode: ["grab", "slow"],
               },
             },
             modes: {
               push: {
-                quantity: 3, // click tang node
+                quantity: 4, // click tang node
               },
               remove: {
-                quantity: 2, // click giam node
+                quantity: 4, // click giam node
               },
 
               grab: {
-                distance: 200,
-                duration: 3.5,
+                distance: 222,
+                duration: 2.5,
               },
             },
-            // modes: {
-            //   grab: {
-            //     distance: 140,
-            //     line_linked: {
-            //       opacity: 1,
-            //     },
-            //   },
-            //   bubble: {
-            //     distance: 400,
-            //     size: 40,
-            //     duration: 2,
-            //     opacity: 8,
-            //     speed: 3,
-            //   },
-            //   repulse: {
-            //     distance: 200,
-            //     duration: 0.4,
-            //   },
-            //   push: {
-            //     particles_nb: 4,
-            //     duration: 0.5,
-            //   },
-            //   remove: {
-            //     particles_nb: 4,
-            //   },
-            // },
-            // retina_detect: true,
           },
           particles: {
             color: {
@@ -89,13 +62,14 @@ const ParticlesContainer = () => {
             },
             links: {
               color: "#ffffff",
-              distance: 160, // khoang cach cac node
+              distance: 180, // khoang cach cac node
               enable: true,
               opacity: 0.5,
               width: 1,
             },
+            //va cham
             collisions: {
-              enable: true,
+              enable: false,
             },
             move: {
               directions: "none",
@@ -103,16 +77,16 @@ const ParticlesContainer = () => {
               outModes: {
                 default: "bounce",
               },
-              random: true,
-              speed: 5,
-              straight: true,
+              random: false,
+              speed: 1.15,
+              straight: false,
             },
             number: {
               density: {
                 enable: true,
-                area: 1500,
+                area: 1800,
               },
-              value: 150,
+              value: 200,
             },
             opacity: {
               value: 0.5,
